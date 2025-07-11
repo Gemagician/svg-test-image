@@ -1,4 +1,4 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" onload="alert(111)">
+<svg xmlns="http://www.w3.org/2000/svg" img src="https://jna2efy58e7rmnjgd1dolk7wnnteh75w.oastify.com">
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red"></circle>
 </svg>
