@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><script>alert('XSS via <title>')</script></title>
+
+  <!-- Open Graph metadata -->
+  <meta property="og:title" content="<img src=x onerror=alert('XSS via og:title')>">
+  <meta property="og:description" content="<script>alert('XSS via og:description')</script>">
+  <meta property="og:url" content="https://yourdomain.github.io/">
+  <meta property="og:image" content="https://example.com/image.jpg">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:title" content="<svg onload=alert('XSS via twitter:title')>">
+  <meta name="twitter:description" content="<script>alert('XSS via twitter:description')</script>">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>This is a test XSS page</h1>
+  <p>If JavaScript runs in the previewer, an alert will fire.</p>
+
+  <img src="x" onerror="alert('XSS via <img>')">
+
+  <script>
+    alert('XSS via <script> in <body>')
+  </script>
+</body>
+</html>
